@@ -93,6 +93,7 @@ export default {
       }
     },
     closeTags(index) {
+      // console.log(this.parent);
       console.log(this.tagsList.length);
       if (this.tagsList.length == 1) {
         messages("warning", "不可全都关闭");
@@ -100,7 +101,7 @@ export default {
         //删除当前
         let tags = this.tagsList.splice(index, 1);
         this.$store.commit("TAGES_LIST", this.tagsList);
-        this.$router.go(-1);
+        // this.$router.go(-1);
       }
     }
   }
